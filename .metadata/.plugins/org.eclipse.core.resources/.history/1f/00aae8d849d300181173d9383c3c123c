@@ -1,0 +1,43 @@
+package ACSL01_02;
+import java.util.*;
+import java.io.*;
+public class C3IN_Palindrome {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(new File("0102C3In.in"));
+		for(int i = 0; i < 9; i++) {
+			int n = sc.nextInt();
+			int b = sc.nextInt();
+			for(int j = 0; j < 10; j++) {
+				//change n: base 10 to b
+				String nToB = Integer.toString(n, b);
+				System.out.println(nToB);
+//				//reverse
+//				String reverseNToB = backwards(nToB);
+//				//change n: base b to base 10
+//				int bToT = Integer.parseInt(nToB, b);
+//				int reverseBToB = Integer.parseInt(reverseNToB, b);
+//				//sum = n + reverse
+//				int sum10 = bToT + reverseBToB;
+//				//change sum: base 10 to base b
+//				String sumB = Integer.toString(sum10, b);
+//				System.out.println(sum10 + " " + sumB + " " + b);
+//				isPalindrome --> break
+//				if(isPalindrome(sumB))
+					break;
+//				n = Integer.parseInt(sumB, b);
+			}
+//			if(!(isPalindrome(String.valueOf(n))))
+//				System.out.print("NONE, ");
+//			System.out.print(n);
+//			System.out.println();
+		}
+	}
+	public static String backwards(String n) {
+		return new StringBuilder((n + "")).reverse().toString();
+	}
+	public static boolean isPalindrome(String s) {
+		StringBuilder sb = new StringBuilder(s);
+		sb.reverse();
+		return s.equals(sb.toString());
+	}
+}

@@ -1,0 +1,14 @@
+package ACSL20_21;
+import java.io.*;
+public class C4JR_Graphs {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int choice = Integer.parseInt(br.readLine());
+		String edges = br.readLine();
+		System.out.println(result(choice, edges));
+		br.close();
+	}
+	public static int result(int choice, String edges) {
+		
+	}
+}

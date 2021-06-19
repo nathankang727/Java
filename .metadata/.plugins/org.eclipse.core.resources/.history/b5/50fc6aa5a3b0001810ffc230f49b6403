@@ -1,0 +1,9 @@
+package ACSL04_05;
+import java.util.*;
+import java.io.*;
+public class C2JR_DigitalDeletions {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(new File("0405C2Jr.in"));
+		
+	}
+}

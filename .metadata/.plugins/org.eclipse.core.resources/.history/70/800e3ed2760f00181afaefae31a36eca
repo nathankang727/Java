@@ -1,0 +1,43 @@
+package ACSL12_13;
+import java.util.*;
+import java.io.*;
+public class C3JR_ChessQueen {
+	public static void main(String[] args) throws IOException{
+		Scanner in = new Scanner(new File("1213C3Jr.in"));
+		for(int i = 0; i < 5; i++) {
+			int count = 0;
+			int row = in.nextInt();
+			if(row == 1)
+				row = 5;
+			else if(row == 2)
+				row = 4;
+			else if(row == 4)
+				row = 2;
+			else if(row == 5)
+				row = 1;
+			int column = in.nextInt();
+			int n = in.nextInt();
+			//System.out.println(row + " " + column + " " + n);
+			String[][] a = new String[6][6];
+			for(int r = 1; r <= 5; r++)
+				for(int c = 1; c <= 5; c++)
+					if(r == row && c == column)
+						a[r][c] = "Q";
+			//Horizontal
+			for(int r = 1; r <= 5; r++)
+				 for(int c = 1; c <= 5; c++)
+					 if((c >= column - n || c <= column + n) && r == row)
+						 a[r][c] = "Q";
+			print2D(a);
+			System.out.println();
+		}
+	}
+	public static void print2D(String[][] a) {
+		for(int r = 0; r < a.length; r++) {
+			for(int  c = 0; c < a[0].length; c++) {
+				System.out.print(a[r][c] + " ");
+			}
+			System.out.println();
+		}
+	}
+} 

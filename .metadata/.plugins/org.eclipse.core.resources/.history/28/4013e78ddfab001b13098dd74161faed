@@ -1,0 +1,18 @@
+public class Solution {
+	public static void main(String[] args) {
+		int y = 2020;
+		int s = 0;
+		int n = 0;
+		int f = 0;
+		for(int a = 1; a <= y; a++) {
+			if(y % a == 0) {
+				s = s + a;
+				n = n + 1;
+			}
+			if(s > y && f == 0) {
+				System.out.println(n - 1);
+				f = 1;
+			}
+		}
+	}
+}

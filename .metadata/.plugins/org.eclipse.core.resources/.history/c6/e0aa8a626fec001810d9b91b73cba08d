@@ -1,0 +1,9 @@
+package ACSL96_97;
+import java.util.*;
+import java.io.*;
+public class AllStar1TimeCards {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(new File("9697AllStar1.in"));
+		
+	}
+}

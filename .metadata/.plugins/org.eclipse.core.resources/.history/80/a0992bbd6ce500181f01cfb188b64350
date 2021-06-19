@@ -1,0 +1,25 @@
+package ACSL15_16;
+import java.util.*;
+import java.io.*;
+public class AllStar1JR_ACSL_Booleo_Jr {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(new File("1516AllStar1Jr.in"));
+		for(int i = 0; i < 10; i++) {
+			int lvls = sc.nextInt();
+			ArrayList<String> bottomLvl = new ArrayList<String>();
+			ArrayList<String> topLvl = new ArrayList<String>();
+			for(int j = 0; j < lvls; j++)
+				bottomLvl.add(" " + sc.next());
+			for(int j = 0; j < lvls - 1; j++)
+				topLvl.add(sc.next());
+			System.out.println(Arrays.toString(bottomLvl.toArray()) + " " + Arrays.toString(topLvl.toArray()));
+			int count = lvls - 2;
+			while(count > 0) {
+				for(int j = 0; j < count; j++) {
+					String s = sc.next();
+				}
+				count--;
+			}
+		}
+	}
+}

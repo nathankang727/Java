@@ -1,0 +1,19 @@
+public class Solution {
+	public static void main(String[] args) {
+		int[] a = {42, 19, 71, 21, 28, 69, 33, 57, 11};
+		int s = 0;
+		int n = 9;
+		for(int x = 0; x <= n - 1; x++)
+			s = s + a[x];
+		int v = s / n;
+		int c = 0;
+		for(int x = 0; x <= n - 1; x++) {
+			if(x < n / 2 && a[x] < v)
+				c = c + 1;
+			else
+				if(x > n / 2 && a[x] > v)
+					c = c + 1;
+		}
+		System.out.println(c);
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;USACO&apos;&#x0D;&#x0A;- Original project: &apos;USACO&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     USACO/src/Dec2019Silver&#x0D;&#x0A;     moobuzz.in&#x0D;&#x0A;     moobuzz.out" description="Delete elements" element1="moobuzz.in" element2="moobuzz.out" element3="/src&lt;Dec2019Silver" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="2" stamp="1577154834620" subPackages="false" version="1.0"/>
+</session>

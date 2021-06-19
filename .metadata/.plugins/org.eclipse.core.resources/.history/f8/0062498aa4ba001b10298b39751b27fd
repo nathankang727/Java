@@ -1,0 +1,8 @@
+package ACSL18_19;
+import java.util.*;
+import java.io.*;
+public class AllStar4_DigitExpressions {
+    public static void main(String[] args) throws IOException {
+    	
+    }
+}

@@ -1,0 +1,37 @@
+package ACSL20_21;
+import java.util.*;
+import java.io.*;
+public class C4JR_Graphs {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int choice = Integer.parseInt(br.readLine());
+		String edges = br.readLine();
+		System.out.println(result(choice, edges));
+		br.close();
+	}
+	public static int result(int choice, String edges) {
+		int n = 0;
+		String[] e = new String[edges.length()];
+		StringTokenizer st = new StringTokenizer(edges);
+		int index = 0;
+		while(st.hasMoreTokens()) {
+			e[index] = st.nextToken();
+			if(n < Integer.parseInt(e[index].substring(0, 1)))
+				n = Math.max(n, Integer.parseInt(e[index].substring(0, 1)));
+			if(n < Integer.parseInt(e[index].substring(1, 2)))
+				n = Math.max(n, Integer.parseInt(e[index].substring(1, 2)));
+			++index;
+		}
+		System.out.println(n);
+//		if(choice == 1) {
+//			for(
+//		}
+//		else if(choice == 2) {
+//			
+//		}
+//		else {
+//			
+//		}
+		return 0;
+	}
+}

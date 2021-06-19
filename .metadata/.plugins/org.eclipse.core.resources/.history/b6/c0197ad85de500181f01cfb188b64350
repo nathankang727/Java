@@ -1,0 +1,8 @@
+package ACSL15_16;
+import java.util.*;
+import java.io.*;
+public class AllStar1JR_ACSL_Booleo_Jr {
+	public static void main(String[] args) throws IOException {
+		
+	}
+}

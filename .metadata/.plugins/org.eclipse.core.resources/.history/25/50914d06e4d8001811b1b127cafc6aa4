@@ -1,0 +1,30 @@
+/*
+Start Time: 6:28
+1st Pause: 6:35-7:28 
+End Time: 
+*/
+package ACSL15_16;
+import java.util.*;
+import java.io.*;
+public class AllStar1JR_ACSL_BOOLEO_JR {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(new File("1516AllStar1Jr.in"));
+		for(int i = 0; i < 10; i++) {
+			int binNum = sc.nextInt();
+			ArrayList<Integer> binary = new ArrayList<Integer>();
+			for(int j = 0; j < binNum; j++)
+				binary.add(sc.nextInt());
+			System.out.println(binNum);
+			boolean isCorrect = true;
+			int pyramidLvl = binNum - 1;
+			int wrongRow = 2;
+			int wrongCol = 1;
+			for(int j = pyramidLvl; j >= 1; j--) {
+				for(int k = 0; k < pyramidLvl; k++) {
+					String[] n = new String[pyramidLvl];
+					n[k] = sc.next();
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+import java.util.Arrays;
+
+public class Solution {
+	public static void main(String[] args) {
+		Catalog[] yes = new Catalog[3];
+		yes[0] = new Catalog("Yee", 32, "Zero");
+		yes[1] = new Catalog("Yee", 31, "Abc");
+		yes[2] = new Catalog("Yee", 253, "B");
+		Arrays.sort(yes);
+		System.out.println(yes[0].parent + " " + yes[1].parent + " " + yes[2].parent);
+    }
+	static class Catalog implements Comparable<Catalog> {
+		public String name;
+		public int level;
+		public String parent;
+		public int compareTo(Catalog c) {
+			return -1;
+		}
+		public Catalog(String nm, int lv, String pr) {
+			this.name = nm;
+			this.level = lv;
+			this.parent = pr;
+		}
+	}
+}

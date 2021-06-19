@@ -1,0 +1,8 @@
+public class Solution {
+	public static void main(String[] args) {
+		System.out.println(func(20, 2));
+	}
+	public static int func(int x, int y) {
+		
+	}
+}

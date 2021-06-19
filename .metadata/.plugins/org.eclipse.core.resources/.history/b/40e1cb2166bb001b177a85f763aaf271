@@ -1,0 +1,30 @@
+public class Solution {
+	public static void main(String[] args) {
+		String a$ = "thewizardingworldofharrypotter";
+		String b$ = "";
+		String c$ = "";
+		String g$ = "";
+		String p$ = "";
+		for(int i = 0; i < a$.length(); i++) {
+			char d$ = a$.charAt(i);
+			if(d$ - 'a' < 'm' - 'a')
+				b$ += d$ + "";
+			else
+				c$ += d$ + "";
+		}
+		System.out.println(c$);
+		for(int j = 0; j < b$.length() - 1; j++) {
+			char e$ = b$.charAt(j);
+			char f$ = b$.charAt(j + 1);
+			if(e$ - 'a' < f$ - 'a')
+				g$ = g$ + e$;
+		}
+		for(int k = 1; k < c$.length(); k++) {
+			char h$ = c$.charAt(k);
+			if(h$ != 'w' && h$ != 'r')
+				p$ = p$ + h$;
+		}
+		System.out.println(p$ + " " + g$);
+		System.out.println(p$.length() - g$.length());
+	}
+}

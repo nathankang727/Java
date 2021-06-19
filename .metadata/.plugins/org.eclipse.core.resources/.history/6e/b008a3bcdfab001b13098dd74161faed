@@ -1,0 +1,14 @@
+public class Solution {
+	public static void main(String[] args) {
+		String a = "CORONAVIRUS";
+		String b = "COVID-19";
+		int s = 0;
+		for(int x = 0; x <= a.length() - 1; x++) {
+			for(int y = 0; y <= b.length() - 1; y++) {
+				if(a.charAt(x) == b.charAt(y))
+					s = s + x * y;
+			}
+		}
+		System.out.println(s);
+	}
+}

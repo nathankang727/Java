@@ -1,0 +1,12 @@
+public class Solution {
+	public static void main(String[] args) {
+		System.out.println(prime(4));
+//		System.out.println(nPrime(2));
+	}
+	public static boolean prime(int n) {
+		for(int i = 2; i <= n / 2; i++)
+			if(n % i == 0)
+				return false;
+		return true;
+	}
+}

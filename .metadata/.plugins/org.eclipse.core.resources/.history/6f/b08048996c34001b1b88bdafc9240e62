@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+public class Solution {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int count = 0;
+		int nn = n;
+		while(n > 0) {
+			nn /= 10;
+			++count;
+		}
+		int start = 0;
+		int end = nn - 1;
+		while(true) {
+			int n1 = n / (10 * start);
+			int n2 = n % (10 * end);
+			System.out.println(n1 + " " + n2);
+			if(n1 != n2) {
+				System.out.println("false");
+				break;
+			}
+			++start;
+			--end;
+			if(start >= end) {
+				System.out.println("true");
+				break;
+			}
+		}
+		sc.close();
+	}
+}

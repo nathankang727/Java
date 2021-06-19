@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="Long.parseLong"/>
+		<item key="casesensitive" value="true"/>
+		<item key="incremental" value="false"/>
+		<item key="wrap" value="true"/>
+		<item key="wholeword" value="false"/>
+		<list key="findhistory">
+			<item value="Integer.parseInt"/>
+			<item value="long"/>
+			<item value="int"/>
+			<item value="innt"/>
+			<item value="i"/>
+			<item value="System.out."/>
+			<item value="cnt2"/>
+			<item value="cnt2&apos;"/>
+			<item value="index"/>
+			<item value="cnt"/>
+			<item value="sum"/>
+			<item value="   "/>
+			<item value="    "/>
+			<item value="     "/>
+			<item value="      "/>
+		</list>
+		<list key="replacehistory">
+			<item value="Long.parseLong"/>
+			<item value="pw."/>
+			<item value="count"/>
+			<item value=", "/>
+			<item value="res"/>
+			<item value="b"/>
+			<item value="n"/>
+			<item value="east"/>
+			<item value="north"/>
+			<item value=""/>
+			<item value="Double.parseDouble"/>
+			<item value="parseLong"/>
+			<item value="Long"/>
+			<item value=" "/>
+			<item value=","/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_WIDTH" value="284"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_X_ORIGIN" value="746"/>
+		<item key="DIALOG_Y_ORIGIN" value="122"/>
+	</section>
+</section>

@@ -1,0 +1,11 @@
+public class Solution {
+	public static void main(String[] args) {
+		System.out.println(f(5, 4));
+	}
+	public static int f(int x, int y) {
+		if(y == 0)
+			return 1;
+		else
+			return x * f(x, y - 1);
+	}
+}

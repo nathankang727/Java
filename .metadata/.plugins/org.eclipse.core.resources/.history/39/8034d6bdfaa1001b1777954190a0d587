@@ -1,0 +1,14 @@
+public class Solution {
+	public static void main(String[] args) {
+		int cnt = 1;
+		for(int i = 1; i <= 2400; i++) {
+			if(2400 % i == 0 && i % 6 == 0) {
+				cnt *= i;
+				System.out.println(i);
+			}
+		}
+		System.out.println(cnt);
+    }
+	public static boolean gcd(int a, int b) {
+	}
+}

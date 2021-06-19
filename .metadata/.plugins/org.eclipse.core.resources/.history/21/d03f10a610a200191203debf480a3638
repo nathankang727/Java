@@ -1,0 +1,30 @@
+/*
+ID: nathank3
+LANG: JAVA
+TASK: crypt1
+*/
+import java.util.*;
+import java.io.*;
+public class crypt1 {
+    static Scanner in;
+    static PrintWriter out;
+    public static void main(String[] args) {
+        try {
+            in = new Scanner(new File("xxx.in"));
+            out = new PrintWriter(new File("xxx.out"));
+            init();
+            out.println(solve());
+            out.close();
+            in.close();
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+    private static void init() {
+    	
+    }
+    private static String solve() {
+        return "";
+    }
+}

@@ -1,0 +1,42 @@
+/*
+Start Time: 9:26
+End Time: 9:58
+*/
+package ACSL03_04;
+import java.util.*;
+import java.io.*;
+public class C2JR_ACSL_CoinStrip {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(new File("0304C2Jr.in"));
+		for(int i = 0; i < 9; i++) {
+			sc.nextInt();
+			int coins = sc.nextInt();
+			int[] res = new int[5];
+			int[] marks = new int[coins];
+			for(int j = 0; j < coins; j++)
+				marks[j] = sc.nextInt();
+			int a = 0;
+			if(marks[0] != 1)
+				a = marks[0] - 1;
+			for(int j = 0; j < coins; j++) {
+				if(a >= 1)
+					res[0]++;
+				if(a >= 2)
+					res[1]++;
+				if(a >= 3)
+					res[2]++;
+				if(a >= 4)
+					res[3]++;
+				if(a >= 5)
+					res[4]++;
+				if(j == coins - 1)
+					break;
+				a = marks[j + 1] - marks[j] - 1;
+			}
+			for(int j = 0; j < 5; j++)
+				System.out.print(res[j] + " ");
+			System.out.println();
+		}
+		sc.close();
+	}
+}

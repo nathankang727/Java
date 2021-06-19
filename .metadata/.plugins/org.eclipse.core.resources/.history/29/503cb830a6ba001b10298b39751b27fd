@@ -1,0 +1,14 @@
+package ACSL18_19;
+import java.util.*;
+import java.io.*;
+public class AllStar4_DigitExpressions {
+	@SuppressWarnings("rawtypes")
+    public static void main(String[] args) throws IOException {
+    	BufferedReader br = new BufferedReader(new FileReader(new File("1819AllStar4.in")));
+    	for(int i = 0; i < 13; i++) {
+    		String input = br.readLine();
+			ArrayList<ArrayList> expressions = new ArrayList<ArrayList>();
+    	}
+    	br.close();
+    }
+}

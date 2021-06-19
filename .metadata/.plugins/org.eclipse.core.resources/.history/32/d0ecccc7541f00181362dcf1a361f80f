@@ -1,0 +1,14 @@
+package ACSL17_18;
+import java.util.*;
+import java.io.*;
+public class C3JR_Walk {
+	public static void main(String[] args) throws IOException {
+		Scanner in = new Scanner(new File("1718C3Jr.in"));
+		int[][] board = new int[4][4];
+		int[] values = new int[4];
+		for(int i = 0; i < 4; i++) {
+			values[i] = in.nextInt();
+		}
+		System.out.println(Arrays.toString(values));
+	}
+}

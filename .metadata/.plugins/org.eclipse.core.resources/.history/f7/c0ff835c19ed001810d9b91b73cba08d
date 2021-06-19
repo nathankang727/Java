@@ -1,0 +1,128 @@
+package ACSL16_17;
+import java.util.*;
+import java.io.*;
+public class AllStar1Numbers {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(new File("1617AllStar1.in"));
+		for(int i = 0; i < 2; i++) {
+			String n = sc.next();
+			int[] nDigits = new int[10];
+			for(int j = 0; j < n.length(); j++)
+				nDigits[Integer.parseInt(n.substring(j, j + 1))]++;
+			int k = sc.nextInt();
+			int[] digits = new int[n.length()];
+			for(int j = 0; j < digits.length; j++)
+				digits[j] = Integer.parseInt(n.substring(j, j + 1));
+			Arrays.sort(digits);
+			String res = "";
+			for(int j = 0; j < digits.length; j++)
+				res += String.valueOf(digits[j]);
+			int smallest = Integer.parseInt(res);
+			int smallest2 = smallest;
+			System.out.println(smallest);
+			res = "";
+			for(int j = digits.length - 1; j > -1; j--)
+				res += String.valueOf(digits[j]);
+			int largest = Integer.parseInt(res);
+			System.out.println(largest);
+			res = "";
+			int count = 1;
+			while(count < 50) {
+				largest--;
+				boolean didNotContinue = true;
+				int[] largestDigits = new int[10];
+				for(int j = 0; j < String.valueOf(largest).length(); j++)
+					largestDigits[Integer.parseInt(String.valueOf(largest).substring(j, j + 1))]++;
+				for(int j = 1; j < 10; j++) {
+					if(largestDigits[j] != nDigits[j]) {
+						didNotContinue = false;
+						break;
+					}
+				}
+				if(didNotContinue)
+					count++;
+			}
+			System.out.println(largest);
+			count = 1;
+			while(count < k) {
+				smallest++;
+				boolean didNotContinue = true;
+				int[] smallestDigits = new int[10];
+				for(int j = 0; j < String.valueOf(smallest).length(); j++)
+					smallestDigits[Integer.parseInt(String.valueOf(smallest).substring(j, j + 1))]++;
+				for(int j = 1; j < 10; j++) {
+					if(smallestDigits[j] != nDigits[j]) {
+						didNotContinue = false;
+						break;
+					}
+				}
+				if(didNotContinue)
+					count++;
+			}
+			System.out.println(smallest);
+			int mean = (smallest + largest) / 2;
+			int[] largestDigits = new int[10];
+			int countMean1 = mean + 1;
+			for(int j = 0; j < String.valueOf(countMean1).length(); j++)
+				largestDigits[Integer.valueOf(String.valueOf(countMean1).substring(j, j + 1))]++;
+			boolean areNotEqual = true;
+			while(areNotEqual) {
+				if(countMean1 == mean + 1) {
+					for(int j = 0; j < 10; j++) {
+						if(largestDigits[j] == nDigits[j])
+							areNotEqual = false;
+						else {
+							areNotEqual = true;
+							break;
+						}
+					}
+				}
+				if(!areNotEqual)
+					break;
+				countMean1++;
+				for(int j = 0; j < 10; j++)
+					largestDigits[j] = 0;
+				for(int j = 0; j < 10; j++) {
+					if(largestDigits[j] == nDigits[j])
+						areNotEqual = false;
+					else {
+						areNotEqual = true;
+						break;
+					}
+				}
+			}
+			System.out.println(countMean1);
+			int[] smallestDigits = new int[10];
+			int countMean2 = mean - 1;
+			for(int j = 0; j < String.valueOf(countMean2).length(); j++)
+				smallestDigits[Integer.valueOf(String.valueOf(countMean2).substring(j, j + 1))]++;
+			boolean areNotEqual2 = true;
+			while(areNotEqual2) {
+				if(countMean2 == mean - 1) {
+					for(int j = 0; j < 10; j++) {
+						if(smallestDigits[j] == nDigits[j])
+							areNotEqual2 = false;
+						else {
+							areNotEqual2 = true;
+							break;
+						}
+					}
+				}
+				if(!areNotEqual2)
+					break;
+				countMean2++;
+				for(int j = 0; j < 10; j++)
+					smallestDigits[j] = 0;
+				for(int j = 0; j < 10; j++) {
+					if(smallestDigits[j] == nDigits[j])
+						areNotEqual2 = false;
+					else {
+						areNotEqual2 = true;
+						break;
+					}
+				}
+			}
+			System.out.println(Math.min(Math.abs(mean - countMean1), Math.abs(mean - countMean2)));
+		}
+	}
+}

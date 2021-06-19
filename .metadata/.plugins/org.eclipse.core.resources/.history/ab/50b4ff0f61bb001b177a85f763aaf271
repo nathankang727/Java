@@ -1,0 +1,16 @@
+public class Solution {
+	public static void main(String[] args) {
+		int cnt = 0;
+		for(int i = 2; i <= 2047; i++) {
+			StringBuilder sb = new StringBuilder();
+			sb.append(Integer.toString(i, 2));
+			StringBuilder sb2 = new StringBuilder();
+			sb2 = sb.reverse();
+			if(sb.equals(sb2)) {
+				System.out.println(i);
+				++cnt;
+			}
+		}
+		System.out.println(cnt);
+	}
+}

@@ -1,0 +1,10 @@
+package ACSL20_21;
+import java.util.*;
+import java.io.*;
+public class C4IN_Graphs {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		br.close();
+	}
+}

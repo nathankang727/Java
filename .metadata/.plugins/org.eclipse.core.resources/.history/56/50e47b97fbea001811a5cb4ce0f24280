@@ -1,0 +1,25 @@
+package ACSL01_02;
+import java.util.*;
+import java.io.*;
+public class C2JR_Checkers {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(new File("0102C2Jr.in"));
+		for(int i = 0; i < 7; i++) {
+			char[][] board = new char[9][9];
+			int playerRow = sc.nextInt();
+			int playerCol = sc.nextInt();
+			board[sc.nextInt()][sc.nextInt()] = 'P';
+			int numberOfOpponents = sc.nextInt();
+			for(int j = 0; j < numberOfOpponents; j++)
+				board[sc.nextInt()][sc.nextInt()] = 'X';
+			int count = 0;
+			while(board[playerRow][palyerCol])
+			for(int r = 1; r <= 8; r++) {
+				for(int c = 1; c <= 8; c++)
+					System.out.print(board[r][c] + " ");
+				System.out.println();
+			}
+			System.out.println();
+		}
+	}
+}

@@ -1,0 +1,13 @@
+public class Solution {
+	public static void main(String[] args) {
+		System.out.println(f(f(111, 20), f(43, 4)));
+	}
+	public static int f(int x, int y) {
+		if(x > 20)
+			return f(x / 3 + 1, y + 2) - 5;
+		else if(x >= 10 && x <= 20)
+			return f(x + 2, y - 3) + 4;
+		else
+			return 2 * x + 3 * y;
+	}
+}

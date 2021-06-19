@@ -1,0 +1,24 @@
+public class Solution {
+	public static void main(String[] args) {
+//		System.out.println(prime(1));
+		System.out.println(nPrime(11));
+	}
+	public static String prime(int n) {
+		if(n <= 1)
+			return "NOT A PRIME";
+		for(int i = 2; i <= n / 2; i++)
+			if(n % i == 0)
+				return "NOT A PRIME";
+		return "IS A PRIME";
+	}
+	public static int nPrime(int n) {
+		int count = 0;
+		int number = 2;
+		while(count < n) {
+			if(prime(number).equals("IS A PRIME"))
+				++count;
+			++number;
+		}
+		return number - 1;
+	}
+}

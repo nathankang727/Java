@@ -1,0 +1,20 @@
+import java.util.*;
+public class Solution {
+	public static void main(String[] args) {
+		String s = "ACSL*FINALS**COMPETITION***THIS*YEAR*";
+		Queue<Integer> q = new LinkedList<Integer>();
+		System.out.println(q.size());
+		for(int i = 0; i < s.length(); i++) {
+			if(s.charAt(i) == '*') {
+				q.poll();
+				q.poll();
+			}
+			else if(s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' || s.charAt(i) == 'o' || s.charAt(i) == 'u')
+				continue;
+			else
+				q.add(0);
+			System.out.println(q.size());
+		}
+		System.out.println(q.size());
+	}
+}

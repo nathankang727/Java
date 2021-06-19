@@ -1,0 +1,27 @@
+import java.util.*;
+import java.io.*;
+public class Solution {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int count = 0;
+		int n1 = n;
+		while(n > 0) {
+			n1 /= 10;
+			++count;
+		}
+		int start = 0;
+		int end = count;
+		while(true) {
+			int 
+			if(n == count) {
+				
+			}
+			++start;
+			--end;
+			if(start >= end)
+				System.out.println("true");
+		}
+		sc.close();
+	}
+}

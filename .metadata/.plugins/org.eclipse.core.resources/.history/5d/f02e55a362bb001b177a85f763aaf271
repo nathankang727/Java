@@ -1,0 +1,14 @@
+import java.util.*;
+public class Solution {
+	public static void main(String[] args) {
+		Stack<Character> s = new Stack<Character>();
+		String str = "DISNEYWORLDORLANDOFLORIDA";
+		for(int i = 0; i < str.length(); i++) {
+			if(str.charAt(i) == 'A' || str.charAt(i) == 'E' || str.charAt(i) == 'I' || str.charAt(i) == 'O' || str.charAt(i) == 'U')
+				s.pop();
+			else
+				s.push(str.charAt(i));
+		}
+		System.out.println(s.pop());
+	}
+}

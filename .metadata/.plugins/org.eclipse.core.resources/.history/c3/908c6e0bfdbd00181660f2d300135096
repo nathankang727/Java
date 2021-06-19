@@ -1,0 +1,28 @@
+package ACSL09_10;
+import java.util.*;
+import java.io.*;
+public class C2JR_ACSL_NYSIIS {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(new File("0910C2Jr.in"));
+		for(int i = 0; i < 10; i++) {
+			String s = sc.nextLine();
+			ArrayList<String> word = new ArrayList<String>();
+			for(int j = 0; j < s.length(); i++)
+				word.add(s.substring(j, j + 1));
+			System.out.println("1");
+			if(s.substring(0, 3).equals("MAC")) {
+				word.set(0, "M");
+				word.set(1, "C");
+			}
+			if(s.substring(0, 2).equals("KN"))
+				word.set(0, "N");
+			if(s.substring(0, 1).equals("K"))
+				word.set(0, "C");
+			if(s.substring(0, 2).equals("PH") || s.substring(0, 2).equals("PF"))
+				word.set(0, "F");
+			if(s.substring(0, 2).equals("SCH"))
+				word.set(0, "S");
+			//System.out.println(Arrays.toString(word.toArray()));
+		}
+	}
+}

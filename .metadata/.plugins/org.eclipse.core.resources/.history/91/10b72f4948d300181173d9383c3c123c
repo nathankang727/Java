@@ -1,0 +1,26 @@
+package ACSL01_02;
+import java.util.*;
+import java.io.*;
+public class C3IN_Palindrome {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(new File("0102C3In.in"));
+		for(int i = 0; i < 9; i++) {
+			int n = sc.nextInt();
+			int b = sc.nextInt();
+			//change n: base 10 to b
+			String nToB = Integer.toString(n, b);
+			//reverse
+			String reverseNToB = backwards(nToB);
+			//change n: base b to base 10
+			int bToT = Integer.parseInt(nToB, b);
+			int reverseBToB = Integer.parseInt(reverseNToB, b);
+			System.out.println(nToB + " " + reverseNToB + " " + bToT + " " + reverseBToB);
+			//sum = n + reverse
+			//change sum: base 10 to base 3
+			//isPalindrome --> break
+		}
+	}
+	public static String backwards(String n) {
+		return new StringBuilder((n + "")).reverse().toString();
+	}
+}

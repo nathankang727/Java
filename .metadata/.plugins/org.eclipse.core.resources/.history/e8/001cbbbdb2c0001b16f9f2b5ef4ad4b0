@@ -1,0 +1,13 @@
+public class Solution {
+	public static void main(String[] args) {
+		System.out.println(f(3, -2));
+	}
+	public static double f(int b, int e) {
+		if(e == 0)
+			return 1.0;
+		else if(e > 0)
+			return b * f(b, e - 1);
+		else
+			return b / f(b, e - 1);
+	}
+}

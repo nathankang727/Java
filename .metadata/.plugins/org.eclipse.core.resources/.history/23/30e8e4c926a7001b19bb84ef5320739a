@@ -1,0 +1,25 @@
+package ACSL20_21;
+import java.util.*;
+import java.io.*;
+public class C4IN_Graphs {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input = br.readLine();
+		System.out.println(sumPathsOfLength2(input));
+		br.close();
+	}
+	@SuppressWarnings("rawtypes")
+	public static int sumPathsOfLength2(String edges) {
+		int sum = 0;
+		ArrayList[] matrix = new ArrayList[10];
+		for(int i = 0; i <= 9; i++)
+			matrix[i] = new ArrayList<Integer>();
+		String[] input = edges.split(" ");
+		for(int i = 0; i < input.length; i++) {
+			int a = Integer.parseInt(input[i].substring(0, 1));
+			int b = Integer.parseInt(input[i].substring(1));
+			matrix[a] 
+		}
+		return sum;
+	}
+}

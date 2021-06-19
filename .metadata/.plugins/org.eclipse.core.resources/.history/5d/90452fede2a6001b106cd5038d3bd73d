@@ -1,0 +1,23 @@
+public class GraphTheoryCalculator {
+	
+	public static void main(String[] args) {
+		
+	}
+	static int N = 3;
+	static void multiply(int a[][], int b[][], int res[][])
+	{
+	    int [][]mul = new int[N][N];
+	    for (int i = 0; i < N; i++)
+	    {
+	        for (int j = 0; j < N; j++) 
+	        {
+	            mul[i][j] = 0;
+	            for (int k = 0; k < N; k++)
+	                mul[i][j] += a[i][k] * b[k][j];
+	        }
+	    }
+	    for (int i = 0; i < N; i++)
+	        for (int j = 0; j < N; j++)
+	            res[i][j] = mul[i][j];
+	}
+}

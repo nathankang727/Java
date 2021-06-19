@@ -1,0 +1,15 @@
+package DP;
+import java.io.*;
+public class Problem2 {
+	private static int[] memo = new int[1001];
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int number = Integer.parseInt(br.readLine());
+		System.out.println(possibleWays(number));
+	}
+	public static int possibleWays(int n) {
+		if(n <= 3)
+			return n;
+		else
+			return possibleWays(d[n - 1]) + possibleWays(d[n - 2]);
+}

@@ -1,0 +1,16 @@
+package ACSL19_20;
+import java.io.*;
+public class AllStar3_Syllables {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		for(int i = 0; i < 13; i++)
+			System.out.println(syllables(br.readLine()));
+		br.close();
+	}
+	public static int syllables(String word) {
+		int sum = 0;
+		String[] prefix = {"co", "de", "dis", "pre", "re", "un"};
+		String[] suffix = {"age", "ful", "ing", "less", "ment"};
+		return sum;
+	}
+}

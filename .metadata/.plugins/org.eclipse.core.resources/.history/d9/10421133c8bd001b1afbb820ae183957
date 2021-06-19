@@ -1,0 +1,8 @@
+public class Solution {
+	public static void main(String[] args) {
+		System.out.println(f(f(f(1, 0), 1), 0));
+	}
+	public static int f(int x, int y) {
+		
+	}
+}

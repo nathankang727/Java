@@ -1,0 +1,14 @@
+public class Solution {
+	public static void main(String[] args) {
+		int[] arr = {11,16,24,39,43,56,69,81,97};
+		for(int x = 0; x <= 8; x++) {
+			int check = 1;
+			for(int y = 3; y <= arr[x] / 2; y += 2) {
+				if(arr[x] % y == 0)
+					check = 0;
+			}
+			if(check == 1)
+				System.out.println(arr[x]);
+		}
+	}
+}

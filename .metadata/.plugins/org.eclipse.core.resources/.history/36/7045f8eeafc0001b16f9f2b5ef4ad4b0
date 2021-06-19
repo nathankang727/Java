@@ -1,0 +1,28 @@
+import java.util.*;
+public class Solution {
+	public static void main(String[] args) {
+		Stack<Integer> s = new Stack<Integer>();
+		s.push(3);
+		s.push(7);
+		s.push(2);
+		s.push(4);
+		int x = s.pop();
+		int y = s.pop();
+		s.push(x + y);
+		x = s.pop();
+		y = s.pop();
+		s.push(x - y);
+		x = s.pop();
+		y = s.pop();
+		s.push(x * y);
+		s.push(9);
+		s.push(3);
+		x = s.pop();
+		y = s.pop();
+		s.push(y / x);
+		x = s.pop();
+		y = s.pop();
+		s.push((int) Math.pow(y, x));
+		System.out.println(s.pop());
+	}
+}

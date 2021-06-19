@@ -1,0 +1,19 @@
+package DataStructures;
+import java.io.*;
+public class Problem2String {
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int[] alphabet = new int[26];
+		String word = br.readLine();
+		for(int i = 0; i < word.length(); i++)
+			alphabet[word.charAt(i) - 'a'] = word.indexOf(word.charAt(i)) + 1;
+		for(int i = 0; i < alphabet.length; i++) {
+			if(alphabet[i] == 0) {
+				alphabet[i] = -1;
+				System.out.print(alphabet[i] + " ");
+			}
+			else
+				System.out.print(alphabet[i] - 1 + " ");
+		}
+	}
+}

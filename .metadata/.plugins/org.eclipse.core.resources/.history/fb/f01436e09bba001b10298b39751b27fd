@@ -1,0 +1,27 @@
+package ACSL18_19;
+import java.util.*;
+import java.io.*;
+public class AllStar3_ACSL_Time {
+    public static void main(String[] args) throws IOException {
+    	BufferedReader br = new BufferedReader(new FileReader(new File("1819AllStar3.in")));
+    	for(int i = 0; i < 13; i++) {
+    		StringTokenizer st = new StringTokenizer(br.readLine());
+    		String dateInput = st.nextToken();
+    		String timeInput = st.nextToken();
+    		int startSeconds = 13050000;
+    		String[] dateString = dateInput.split("/");
+    		int[] date = new int[3];
+    		String[] timeString = timeInput.split(":");
+    		int[] time = new int[3];
+    		for(int j = 0; j < 3; j++) {
+    			date[j] = Integer.parseInt(dateString[j]);
+    			time[j] = Integer.parseInt(timeString[j]);
+    		}
+    		int normalYear = 32850000;
+    		int cnt = 0;
+    		
+    		System.out.println(cnt - startSeconds);
+    	}
+    	br.close();
+    }
+}

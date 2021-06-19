@@ -1,0 +1,13 @@
+public class Solution {
+	public static void main(String[] args) {
+		String a = "FOURTHACSLCONTEST";
+		String b = "";
+		for(int x = 1; x <= a.length() - 2; x++) {
+			if(a.charAt(x) - 'A' > 'O' - 'A')
+				b = b + a.charAt(x + 1);
+			if(a.charAt(x) - 'A' < 'O' - 'A')
+				b = a.charAt(x - 1) + b;
+		}
+		System.out.println(b);
+    }
+}

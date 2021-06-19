@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/ACSL1/src/ACSL12_13/AllStar1_ACSL_Gold.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ACSL12_13.AllStar1_ACSL_Gold"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ACSL1"/>
+</launchConfiguration>

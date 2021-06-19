@@ -1,0 +1,28 @@
+import java.util.*;
+public class Solution {
+	public static void main(String[] args) {
+		Stack<Character> stack = new Stack<Character>();
+		stack.push('G');
+		stack.push('E');
+		stack.push('R');
+		stack.push('B');
+		stack.pop();
+		stack.pop();
+		stack.push('E');
+		stack.pop();
+		stack.push('R');
+		stack.push('A');
+		stack.push('D');
+		stack.pop();
+		stack.push('A');
+		stack.push('I');
+		stack.pop();
+		stack.pop();
+		stack.push('S');
+		stack.push('Y');
+		stack.pop();
+		stack.pop();
+		stack.pop();
+		System.out.println(stack.pop());
+	}
+}

@@ -1,0 +1,42 @@
+package ACSL01_02;
+import java.util.*;
+import java.io.*;
+public class C2JR_Checkers {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(new File("0102C2Jr.in"));
+		for(int i = 0; i < 7; i++) {
+			int playerRow = sc.nextInt();
+			int playerCol = sc.nextInt();
+			int[][] board = new int[9][9];
+			board[playerRow][playerCol] = 1;
+			int numberOfOpponents = sc.nextInt();
+			for(int j = 0; j < numberOfOpponents; j++)
+				board[sc.nextInt()][sc.nextInt()] = 2;
+			int count = 0;
+//			while(playerRow + 1 <= 7 && playerCol + 1 <= 7 && playerCol - 1 >= 2
+//					&& (board[playerRow + 1][playerCol + 1] == 2
+//					|| board[playerRow + 1][playerCol - 1] == 2) && (board[playerRow + 2][playerCol + 2] == 0 ||
+//					board[playerRow + 2][playerCol - 2] == 0)) {
+//				if(board[playerRow + 1][playerCol + 1] == 2 && playerRow + 2 <= 8 && playerCol + 2 <= 8 &&
+//						board[playerRow + 2][playerCol + 2] == 0) {
+//					playerRow += 2;
+//					playerCol += 2;
+//				}
+//				else if(board[playerRow + 1][playerCol - 1] == 2 && playerRow + 2 <= 8 && playerCol - 2 >= 1
+//						&& board[playerRow + 2][playerCol - 2] == 0) {
+//					playerRow += 2;
+//					playerCol -= 2;
+//				}
+//				count++;
+//				for(int r = 1; r < 9; r++) {
+//					for(int c = 1; c < 9; c++)
+//						System.out.print(board[r][c] + " ");
+//					System.out.println();
+//				}
+//				System.out.println();
+//			}
+//			System.out.println("---------------------------");
+//			System.out.println(count + " " + (playerRow == 8 ? "KING" : ""));
+		}
+	}
+}

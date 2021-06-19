@@ -1,0 +1,50 @@
+package ACSL18_19;
+import java.util.*;
+import java.io.*;
+public class AllStar2_ACSL_Stretch {
+    static BufferedReader br;
+    static int r, c, s, n;
+    static int[] nums;
+    static boolean[][] grid;
+    static String pieces;
+    public static void main(String[] args) throws IOException {
+        br = new BufferedReader(new FileReader(new File("1819AllStar2.in")));
+        for(int i = 0; i < 1; i++) {
+        	try {
+        		init();
+        		solve();
+        	}
+        	catch(Exception e) {
+        		e.printStackTrace();
+        	}
+        }
+        br.close();
+    }
+    private static void init() throws IOException {
+    	StringTokenizer st = new StringTokenizer(br.readLine());
+    	r = Integer.parseInt(st.nextToken());
+    	c = Integer.parseInt(st.nextToken());
+    	s = Integer.parseInt(st.nextToken());
+    	n = Integer.parseInt(st.nextToken());
+    	nums = new int[n];
+    	for(int i = 0; i < n; i++)
+    		nums[i] = Integer.parseInt(st.nextToken());
+    	grid = new boolean[r][c];
+    	for(int i = 0; i < n; i++)
+    		grid[(nums[i] - 1) / c][(nums[i] - 1) % c] = true;
+    	pieces = "ABCDE";
+    }
+    private static void solve() {
+    	String res = "";
+    	int index = 0;
+    	while(!Arrays.toString(grid[r - 1]).contains("true")) {
+    		int ind = index % 5;
+    		if(ind == 0) {
+    			if((nums[s] - 1) / c == 0)
+    				continue;
+    		}
+    		res += pieces.substring(ind, ind + 1);
+    	}
+    	System.out.println(res);
+    }
+}

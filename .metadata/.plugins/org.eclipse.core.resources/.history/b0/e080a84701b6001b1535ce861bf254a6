@@ -1,0 +1,11 @@
+package ACSL19_20;
+import java.util.*;
+import java.io.*;
+public class AllStar3_Syllables {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

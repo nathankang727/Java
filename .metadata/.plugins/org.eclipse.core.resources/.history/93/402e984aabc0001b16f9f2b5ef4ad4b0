@@ -1,0 +1,18 @@
+public class Solution {
+	public static void main(String[] args) {
+		int cnt = 0;
+		String s = Integer.toString(2021, 2);
+		for(int i = 0; i < s.length(); i++)
+			if(s.charAt(i) == '1')
+				++cnt;
+		for(int i = 2021; i <= 2039; i++) {
+			int cnt2 = 0;
+			String s2 = Integer.toString(2021, 2);
+			for(int j = 0; j < s.length(); j++)
+				if(s2.charAt(j) == '1')
+					++cnt2;
+			if(cnt2 == cnt + 2)
+				System.out.println(i);
+		}
+	}
+}
