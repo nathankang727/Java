@@ -7,6 +7,8 @@ public class DFS01 {
 	static int[] dx = {-1, 1, 0, 0};
 	static int[] dy = {0, 0, 1, -1};
 	static int n, m, cnt;
+    static int[][] map;
+    static Queue<Integer> q;
 	public static void main(String[] args) {
 		try {
             br = new BufferedReader(new InputStreamReader(System.in));
